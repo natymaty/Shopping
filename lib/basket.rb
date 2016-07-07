@@ -6,8 +6,8 @@ class Basket
     @products = []
     @id = next_id
   end
-  def add(product_id)
-    selected_product = @products.find { |o| o.id == product_id }
+  def add(available_products, product_id)
+    selected_product = available_products.find { |o| o.id == product_id }
 #    selected_product[:quantity] = 1
 #   if basket.detect { |p| p[:id] == i} allow_blank: false
     @products << selected_product
