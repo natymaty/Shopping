@@ -8,3 +8,4 @@ product3 = Product.new( "lava", 2 )
 @products = [product1, product2, product3]
 basket = Basket.new
 p basket.add(@products,1)
+p basket.remove(1)

@@ -13,10 +13,10 @@ class Basket
     @products << selected_product
   end
 
-#  def remove(product_id)
-#    @basket.delete_if { |p| p[:id] == product_id }
-#    @shop
-# end
+  def remove(product_id)
+    products.delete_if { |product| product.id == product_id }
+  end
+
   private
   def next_id
     @@id +=1
