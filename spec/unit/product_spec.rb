@@ -1,4 +1,5 @@
 require_relative '../../lib/product'
+
 RSpec.describe Product do
   let(:price) {10}
   

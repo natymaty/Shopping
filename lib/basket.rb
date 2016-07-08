@@ -1,5 +1,5 @@
+require_relative "./product"
 class Basket
-  require_relative "./product"
   attr_reader :id
   attr_accessor :products
   @@id = 0
