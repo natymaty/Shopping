@@ -1,5 +1,6 @@
+require_relative "./product"
 class Basket
-  require_relative "./product"
+  attr_reader :id
   attr_accessor :products
   @@id = 0
   def initialize
@@ -7,10 +8,10 @@ class Basket
     @id = next_id
   end
   def add(available_products, product_id)
-    selected_product = available_products.find { |o| o.id == product_id }
+    selected_product = available_products.find { |product| product.id == product_id }
 #    selected_product[:quantity] = 1
 #   if basket.detect { |p| p[:id] == i} allow_blank: false
-    @products << selected_product
+    products << selected_product
   end
 
 #  def remove(product_id)
