@@ -1,14 +1,13 @@
 module Shop
   class DeleteItemFromWarehouse
-    def call(id, product_id)
+    def call(item_id)
       warehouse_item = WAREHOUSE.find do |warehouse|
-        warehouse.id == id
-        warehouse.product_id == product_id
+        warehouse.item_id == item_id
       end
 
       return unless warehouse_item
-      if warehouse_product.quantity > 1
-        warehouse_product.quantity -=1
+      if warehouse_item.quantity > 1
+        warehouse_item.quantity -=1
       else
         WAREHOUSE.delete(warehouse_item)
       end

@@ -1,0 +1,32 @@
+<h1> My basket </h1>
+<table>
+  <thead>
+    <tr>
+      <th> Product name</th>
+      <th> Product price</th>
+      <th> Quantity</th>
+      <th> Total price</th>
+      <th> Total price with VAT</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% basket.each do |basket_item| %>
+      <tr>
+        <td><%= basket_item[:product].name %> </td>
+        <td><%= basket_item[:product].price %> </td>
+        <td><%= basket_item[:quantity] %> </td>
+        <td><%= basket_item[:total_price] %> </td>
+        <td><%= basket_item[:price_with_vat] %> </td>
+      </tr>
+    <% end %>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>Summary</td>
+      <td><%= basket.map{|x| x[:total_price]}.reduce(:+)%></td>
+    </tr>
+  </tfoot>
+</table>
+
