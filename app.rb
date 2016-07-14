@@ -26,7 +26,6 @@ module Shop
     end
 
     post "/basket" do
-      p params
       AddItemToBasket.new(params).call
       redirect "/"
     end
