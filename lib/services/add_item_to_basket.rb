@@ -13,4 +13,3 @@ module Shop
     end
   end
 end
-

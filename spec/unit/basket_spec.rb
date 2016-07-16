@@ -1,4 +1,4 @@
-require_relative '../../lib/basket'
+require_relative '../../lib/models/basket'
 
 RSpec.describe Basket do
   context "#id" do
