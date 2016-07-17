@@ -8,7 +8,6 @@ RSpec.describe "GET /products/:id", type: :request do
     end
 
     it "returns 404 HTTP code" do
-      p last_response
       expect(last_response.status).to eql(404)
     end
 
