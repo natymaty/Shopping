@@ -1,6 +1,8 @@
 source "https://rubygems.org"
-group :test do
-  gem "rspec"
-end
 gem "rack"
 gem "sinatra"
+
+group :test do
+  gem "rack-test"
+  gem "rspec"
+end
